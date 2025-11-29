@@ -17,10 +17,25 @@
             height: 75px;
             width: 75px;
         }
+        p1{
+            font-size: 25px;
+        }
+        .fs-7{
+            font-size: 25px;
+        }
+        .fs-8{
+            font-size: 12px;
+        }
+        .text-ob-blue{
+            color: #275692;
+        }
+        .bg-ob-blue{
+            background-color: #275692;
+        }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href=""><img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/8b5611eb-ff3a-407f-9adc-e116a23373fc/OBMC+LOGO+2024-04.png" alt="Logo" class=""></a>
         
@@ -59,35 +74,37 @@
 
 <br>
 
-<p class="fw-normal display-4 text-center">OBMC Student Enrollment Form</p>
+<p class="fw-normal display-4 text-center text-ob-blue">OBMC Student Enrollment Form</p>
     <br>
     <p class="fw-normal text-center">Fill out the form below to enroll for the upcoming school year.</p>
 <br>
 
 <div class="container p-3 bg-light bg-opacity-50 text-dark rounded">
-        <p class="fw-normal text-left">Student Information</p>
-		
+        <p class="fw-normal fs-7">Student Information</p>
+
         <div class="row">
             <div class="col">
-                <label class="form-label" for="firstname">First name:</label>
+                <label class="form-label" for="firstname">First name</label>
 		        <br>
 		        <input type="text" class="form-control form-control-sm" name="firstname" placeholder="John" required>
             </div>
             <div class="col">
-                <label class="form-label" for="lastname">Last name:</label>
+                <label class="form-label" for="lastname">Last name</label>
 		        <br>
 		        <input type="text" class="form-control form-control-sm" name="lastname" placeholder="Doe" required>
             </div>
         </div>
+        
+        <br>
 
         <div class="row">
             <div class="col">
-                <label class="form-label" for="birth">Birth Date:</label>
+                <label class="form-label" for="birth">Birth Date</label>
 		        <br>
 		        <input type="date" class="form-control form-control-sm" name="birth" required>
             </div>
             <div class="col">
-                <label class="form-label" for="gender">Gender:</label>
+                <label class="form-label" for="gender">Gender</label>
 		        <br>
 		        <select class="form-select form-select-sm" name="gender" required>
 			        <option>Select...</option>
@@ -96,66 +113,88 @@
 		        </select>
             </div>
             <div class="col">
-                <label class="form-label" for="lastname">Last name:</label>
+                <label class="form-label" for="grade">Grade Level</label>
 		        <br>
-		        <input type="text" class="form-control form-control-sm" name="lastname" placeholder="Doe" required>
+                <select class="form-select form-select-sm" name="grade" required>
+		            <option>Select...</option>
+                    <option>Kindergarten/Casa</option>
+                    <option>Grade 1</option>
+                    <option>Grade 2</option>
+                    <option>Grade 3</option>
+                    <option>Grade 4</option>
+                    <option>Grade 5</option>
+                    <option>Grade 6</option>
+                    <option>Grade 7</option>
+			        <option>Grade 8</option>
+			        <option>Grade 9</option>
+			        <option>Grade 10</option>
+			        <option>Grade 11</option>
+			        <option>Grade 12</option>
+                </select>
             </div>
         </div>
+
+        <br>
+
+        <p class="fw-normal fs-7">Contact Details</p>
 
         <div class="row">
             <div class="col">
-                <label for="Email">Email</label>
+                <label class="form-label" for="email">Email Address</label>
 		        <br>
-                <input type="email" name="Email" id="Email" placeholder="example@gmail.com" required>
+                <input type="email" name="email" class="form-control form-control-sm" placeholder="example@gmail.com" required>
+            </div>
+        </div>
+        
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="contact">Contact Number</label>
+		        <br>
+                <input type="number" name="contact" class="form-control form-control-sm" placeholder="0912-345-6789" required>
+            </div>
+        </div>
+
+		<br>
+        
+        <p class="fw-normal fs-7">Other Information</p>
+
+        <div class="col">
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="mode">
+                <label class="form-label" for="online">Online</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="mode">
+                <label class="form-label" for="face2face">Face-to-Face</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="mode">
+                <label class="form-label" for="hybrid">Hybrid</label>
+            </div>
+
+            <br>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="confirm" required>
+                <label class="form-label" for="confirm">I confirm that the information provided is true and complete.</label>
             </div>
         </div>
 
 		<br><br>
 
-		<label for="Grade">Grade and Section:</label>
-		<br>
-		<select id="Grade" name="Grade">
-			<option>Grade 7</option>
-			<option>Grade 8</option>
-			<option>Grade 9</option>
-			<option>Grade 10</option>
-			<option>Grade 11</option>
-			<option>Grade 12</option>
-		</select>
-
-		<br><br>
-
-		<label for="Skill">What are your skills?</label>
-		<br>
-
-		<input type="checkbox" name="Code" id="Code">
-		<label for="Code">Coding</label>
-
-		<input type="checkbox" name="Design" id="Design">
-		<label for="Design">Design</label>
-
-		<input type="checkbox" name="Electronics" id="Electronics">
-		<label for="Electronics">Electronics</label>
-
-		<br><br>
-
-		<label for="reasons">Tell us why you want to join:</label>
-		<br>
-
-		<textarea id="reasons" name="reasons" rows="" cols="60" placeholder=""></textarea>
-
-		<br>
-
-		<h2>Robotics activites we offer:</h2>
-		<ul>
-			<li>Line Following Robots</li>
-			<li>Light Following Robots</li>
-			<li>Obstacle Avoidance Programmming</li>
-		</ul>
-        <center><button type="submit" class="btn btn-primary" name="submit">Submit Enrollment</button></center>
-        <br>
+        <center>
+            <button type="submit" class="btn btn-primary">Submit Enrollment</button>
+        </center>
 </div>
 
-<p class="text-light">.</p>
+<br>
+
+<div class="container p-1 bg-ob-blue text-light text-center fs-8 rounded">
+        © 2025 Student Enrollment System | Edrian Correa 9-Ruby
+</div>
+
+<br>
 </body>
 </html>
